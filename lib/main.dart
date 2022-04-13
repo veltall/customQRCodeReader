@@ -297,9 +297,6 @@ class _QRViewExampleState extends ConsumerState<QRViewExample> {
       this.controller = controller;
     });
     controller.scannedDataStream.listen((scanData) {
-      // setState(() {
-      //   result = scanData;
-      // });
       String newLine = ref.watch(idProvider).toString() +
           ",${scanData.code}," +
           DateTime.now().toString();
